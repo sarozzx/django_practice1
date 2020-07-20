@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if latest_blogs_list %}
+    <ul>
+    {% for blog in latest_blogs_list %}
+        <li><a href="/blog/{{ blog.id }}/">{{ blog.blog_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No blogs are available.</p>
+{% endif %}
+
+</body>
+</html>
